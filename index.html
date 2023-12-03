@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centered Image</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            position: relative;
+            font-family: 'Helvetica', sans-serif; /* Set the font to Helvetica */
+        }
+
+        img {
+            width: 100px; /* Adjust the size as needed */
+            height: 100px;
+            object-fit: cover;
+            margin-bottom: 10px; /* Add some spacing between the image and text */
+        }
+
+        .rating-text,
+        .description-text,
+        .instructions-text {
+            color: black; /* Change color to black */
+            font-size: 16px; /* Adjust the font size as needed */
+            text-align: center; /* Center the text */
+        }
+
+        .instructions-text span {
+            font-size: 20px; /* Adjust the font size for both lines */
+        }
+
+        .instructions-text strong {
+            font-weight: bold; /* Make the text bold */
+        }
+
+        .arrow-up {
+            position: absolute;
+            top: 10px; /* Adjust the distance from the top */
+            right: 20px; /* Adjust the distance from the right */
+            font-size: 24px; /* Adjust the font size of the arrow */
+        }
+    </style>
+</head>
+<body>
+    <img src="https://i.postimg.cc/qRhzFvfT/1200x630wa-removebg-preview-2.png" alt="Small Square Image">
+    <div class="arrow-up">&#x2191;</div>
+    <p class="rating-text">4.5 Stars</p>
+    <p class="description-text">Easy to download:</p>
+    <p class="instructions-text">
+        • <span>Click on the three dots!</span><br>
+        • <span>Select <strong>Open in Browser</strong></span>
+    </p>
+</body>
+</html>
